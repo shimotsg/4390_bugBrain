@@ -1,0 +1,83 @@
+<h2 id="readme">README</h2>
+
+<hr>
+
+<p>12-21-2018</p>
+
+<p>Geoffrey Shimotsu  <br>
+geoffrey.shimotsu01@utrgv.edu</p>
+
+<p>This file details how to run code produced for the CSCI4930 project. All code run using Python 3.6.</p>
+
+<hr>
+
+<h2 id="ensemblemodelpy">ensembleModel.py</h2>
+
+<p>This file requires file structuring: </p>
+
+<ul>
+<li>trainingImages <br>
+<ul><li>trainingImagesClass1</li>
+<li>trainingImagesClass2</li>
+<li>…</li>
+<li>trainingImagesClassN</li></ul></li>
+<li>validationImages <br>
+<ul><li>validationImagesClass1</li>
+<li>validationImagesClass2</li>
+<li>…</li>
+<li>validationImagesClassN</li></ul></li>
+</ul>
+
+<p>Specify the paths to training and validation folders in <strong>lines 30 and 31</strong>.</p>
+
+<p>Paths to <code>model.state_dict</code> files for ResNet18 models (initialized with last fc layer reshaped) must be specified for initialized models in <strong>lines 142, 156, &amp; 170</strong>.</p>
+
+<h2 id="gammacorrectpy">gammaCorrect.py</h2>
+
+<p>This script applies gamma correction and saves a corrected copy of all images in directory. Directory must only contain images. Change the gamma value on <strong>line 16</strong> to desired value, save and run script. Optionally change prefix on <strong>line 28</strong>.</p>
+
+<h2 id="imagescrapepy">imageScrape.py</h2>
+
+<p>This script opens a Selenium browser and downloads Google image search results. Specify PATH for images on <strong>line 12</strong>. Specify the search term string on <strong>line 14</strong>. If &gt;100 images desired, login to Google and modify url string on <strong>line 15</strong>. To prevent scrolling, modify second parameter in <strong>line 27</strong>. </p>
+
+<h2 id="singlemodelfeatureextractpy">singleModelFeatureExtract.py</h2>
+
+<p>This file requires file structuring: </p>
+
+<ul>
+<li>trainingImages <br>
+<ul><li>trainingImagesClass1</li>
+<li>trainingImagesClass2</li>
+<li>…</li>
+<li>trainingImagesClassN</li></ul></li>
+<li>validationImages <br>
+<ul><li>validationImagesClass1</li>
+<li>validationImagesClass2</li>
+<li>…</li>
+<li>validationImagesClassN</li></ul></li>
+</ul>
+
+<p>Specify PATHs to training and validation sets on <strong>lines 38 and 39</strong>.</p>
+
+<h2 id="singlemodelfinetunepy">singleModelFinetune.py</h2>
+
+<p>This file requires file structuring: </p>
+
+<ul>
+<li>trainingImages <br>
+<ul><li>trainingImagesClass1</li>
+<li>trainingImagesClass2</li>
+<li>…</li>
+<li>trainingImagesClassN</li></ul></li>
+<li>validationImages <br>
+<ul><li>validationImagesClass1</li>
+<li>validationImagesClass2</li>
+<li>…</li>
+<li>validationImagesClassN</li></ul></li>
+</ul>
+
+<p>Specify names of training and validation set folders on <strong>lines 48 and 49</strong>. Specify finetuning or feature extraction with bool value on <strong>line 45</strong>. <strong>Line 170</strong> defines a PATH to save a <code>model.state_dict</code>.</p>
+
+<blockquote>
+  <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
+</blockquote>
